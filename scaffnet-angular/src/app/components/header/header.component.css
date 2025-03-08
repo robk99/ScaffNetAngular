@@ -1,0 +1,12 @@
+/* Header-specific styles can be added here */
+.theme-toggle-icon {
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-icon:hover path {
+  stroke: #fbbf24; /* Yellow color for hover */
+}
+
+.theme-toggle-icon:hover {
+  transform: scale(1.1);
+} 

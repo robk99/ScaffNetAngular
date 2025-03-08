@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import 'ngx-toastr/toastr';
+
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --accent-color: #8b5cf6;
+  --background-light: #f9fafb;
+  --text-light: #1f2937;
+  --background-dark: #1f2937;
+  --text-dark: #f9fafb;
+  --yellow-hover: #fbbf24;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Add these classes to ensure Tailwind dark mode works with our theme system */
+.light-theme .dark\:bg-gray-800 {
+  background-color: transparent;
+}
+
+.light-theme .dark\:bg-gray-900 {
+  background-color: transparent;
+}
+
+.light-theme .dark\:text-gray-300 {
+  color: var(--text-light);
+}
+
+.light-theme .dark\:text-gray-400 {
+  color: var(--text-light);
+}
+
+.light-theme .dark\:border-gray-600 {
+  border-color: #e5e7eb;
+}
+
+/* Fix for input fields in light mode */
+.light-theme .dark\:bg-gray-700 {
+  background-color: white;
+  color: var(--text-light);
+}
+
+.light-theme .dark\:text-white {
+  color: var(--text-light);
+}
+
+.dark-theme .dark\:bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.dark-theme .dark\:bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.dark-theme .dark\:bg-gray-700 {
+  background-color: #4a5568;
+}
+
+.dark-theme .dark\:text-white {
+  color: #ffffff;
+}
+
+.dark-theme .dark\:text-gray-300 {
+  color: #d1d5db;
+}
+
+.dark-theme .dark\:text-gray-400 {
+  color: #9ca3af;
+}
+
+.dark-theme .dark\:border-gray-600 {
+  border-color: #4b5563;
+}
+
+/* Theme toggle icon hover effects */
+.theme-toggle-icon:hover path {
+  stroke: var(--yellow-hover);
+}
+
+.theme-toggle-icon:hover {
+  transform: scale(1.1);
+}
